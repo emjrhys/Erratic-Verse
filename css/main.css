@@ -80,7 +80,7 @@ body {
 }
 
 #textbox {
-	width: 232px;
+	width: 132px;
 }
 
 #form1 {
@@ -93,8 +93,7 @@ body {
 }
 
 .mybutton {
-	/*background-color: #CCCCCC;
-	color: #666666;*/
+	background-color: #CCCCCC;
 }
 
 #footer{
