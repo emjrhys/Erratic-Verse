@@ -1,0 +1,93 @@
+@charset "UTF-8";
+/* CSS Document */
+/* Created by x_terrain and noahjl for Erratic Verse. © 2011 Erratic Verse */
+
+/* main objects */
+
+a {
+	text-decoration: none;
+	color: #666666;
+}
+a:visited {
+	color: #666666;
+}
+a:hover {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+body {
+	background-color: #FFFFFF;
+	font-family: Helvetica, Arial, Georgia, Sans-serif, Cursive;
+	
+}
+
+#title {
+	background-color: #666666;
+	margin-top: 120px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0px;
+	width: 650px;
+	height: 120px;
+	padding-top: 0px;
+	padding-left: auto;
+	padding-right: auto;
+	padding-bottom: 1px;
+	text-align: center;
+	color: #FFF;
+}
+
+#nav {
+	background-color: #CCCCCC;
+	margin-top: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0px;
+	width: 650px;
+	height: 30px;
+	padding-top: 10px;
+	padding-left: auto;
+	padding-right: auto;
+	padding-bottom: 0px;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+#content{
+	background-color: #FFFFFF;
+	margin-top: 0px;
+	margin-bottom: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 20px;
+	padding-right: 20px;
+	width: 610px;
+	height: 200px;
+}
+
+#poem {
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+
+#footer{
+	background-color: #666666;
+	margin-top: 0px;
+	margin-bottom: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 1px;
+	padding-bottom: 0px;
+	padding-left: 20px;
+	padding-right: 20px;
+	width: 610px;
+	height: 50px;
+	color: #FFF;
+}
+
+/*fonts*/
