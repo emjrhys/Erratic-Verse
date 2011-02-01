@@ -7,21 +7,19 @@
         <!-- © 2011 Erratic Verse-->
 	</head>
 
-	<body onload = "displayThis();">
+	<body>
 		<div id="title"><img src="images/Header.png" title = "Erratic Verse - A poem generator" alt = "Erratic Verse - A poem generator" />
 		</div>
         <div id = "nav">
-			poem &nbsp&nbsp&nbsp&nbsp&nbsp <a href = "submit.html">submit</a> &nbsp&nbsp&nbsp&nbsp&nbsp rate &nbsp&nbsp&nbsp&nbsp&nbsp donate &nbsp&nbsp&nbsp&nbsp&nbsp about
+			poem &nbsp&nbsp&nbsp&nbsp&nbsp <a href = "submit.html">submit</a> &nbsp&nbsp&nbsp&nbsp&nbsp <del>rate</del> &nbsp&nbsp&nbsp&nbsp&nbsp <del>donate</del> &nbsp&nbsp&nbsp&nbsp&nbsp <a href = "about.html">about</a>
         </div>
 		<div id="content">
         	<form name = "mood" id = "form1">
             How are you feeling?<br /><br />
-            <input type = "button" class = "mybutton" value = "Ecstatic" onClick = ""/> <input type = "button" class = "mybutton" value = "Romantic" onClick = ""/> <input type = "button" class = "mybutton" value = "Reflective" onClick = ""/> <input type = "button" class = "mybutton" value = "Furious" onClick = ""/> <input type = "button" class = "mybutton" value = "Melancholic" onClick = ""/>
+            <input type = "button" class = "mybutton" value = "Ecstatic" onClick = "getPoem(0);"/> <input type = "button" class = "mybutton" value = "Romantic" onClick = "getPoem(1);"/> <input type = "button" class = "mybutton" value = "Reflective" onClick = "getPoem(2);"/> <input type = "button" class = "mybutton" value = "Furious" onClick = "getPoem(3);"/> <input type = "button" class = "mybutton" value = "Melancholy" onClick = "getPoem(4);"/>
             </form>
 		<p id = "poem">
-        	Dying on a distant shore, <br />
-            the crumbling pillars of my humanity,<br />
-            I collect my tears in a fishbowl.
+        	Click a mood to generate a poem...
 		</p>
 		</div>
         <div id = "footer">
