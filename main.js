@@ -1,7 +1,9 @@
 // JavaScript Document
 // © 2011 Erratic Verse
 
-var darkLines = ["eyes like shattered glass","a dying soul, a single tear wept","through a dark forest","my one hope stolen","your warm embrace stings like the cold","the sunset reminds me","swimming in an endless void","the inorganic blood of empty souls","a final sunset","dying on a distant shore","emptiness","why? I disappear","misunderstanding","for the last time","piercing my heart","I collect my tears in a fishbowl","the falling stones of my existance","the crumbling pillars of my humanity","the rasping breath of a fallen angel","I fall into oblivion"];
+var reflectLines = ["rippling water under traveling fish","waving blossoms on a lone cherry tree","bees humming from flower to flower","bathing in the light of the stars","truth looking out from behind dark clouds","I spend my days in silent contemplation","I percieve truth through my experiences","shattering the mirrors of the past","I walk through a broken memory","gazing across the darkening treetops","I wait for the night to fall","leaves falling to rest on shadow","the world bustles with activity","the calm of night creeps across the earth","the scent calms my soul","rain falls on a silent pond","a dark secret beneath shining gardens","hushed words of other worlds","fish swimming through a quiet sea","tranquil faces beneath the waves","dreams scattered across desolation","asleep on a distant shore"];
+
+var darkLines = ["eyes like shattered glass","a dying soul, a single tear wept","my one hope stolen","your warm embrace stings like the cold","the sunset reminds me","swimming in an endless void","the inorganic blood of empty souls","a final sunset","dying on a distant shore","emptiness","why? I disappear","misunderstanding","for the last time","piercing my heart","I collect my tears in a fishbowl","the falling stones of my existance","the crumbling pillars of my humanity","the rasping breath of a fallen angel","I fall into oblivion"];
 
 function getPoem(num)
 {
@@ -17,7 +19,26 @@ function getPoem(num)
 	}
 	else if (num == 2)
 	{
-		poem = "This mood is not complete...";
+		var line1 = Math.floor(Math.random()*reflectLines.length);
+		var line2 = Math.floor(Math.random()*reflectLines.length);
+		var line3 = Math.floor(Math.random()*reflectLines.length);
+	
+		while (line1 == line2)
+		{
+			line2 = Math.floor(Math.random()*reflectLines.length);
+		}
+		while (line3 == line2 || line3 == line1)
+		{
+			line3 = Math.floor(Math.random()*reflectLines.length);
+		}
+		
+		line1 = reflectLines[line1];
+		line2 = reflectLines[line2];
+		line3 = reflectLines[line3];
+	
+		line1 = capFirst(line1);
+	
+		poem = line1 + ",<br>" + line2 + ",<br>" + line3 + ".";
 	}
 	else if (num == 3)
 	{
@@ -55,4 +76,33 @@ function getPoem(num)
 function capFirst(string)
 {
     return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+/**
+ * DHTML textbox character counter script. Courtesy of SmartWebby.com (http://www.smartwebby.com/dhtml/)
+ */
+
+maxL=40;
+var bName = navigator.appName;
+function taLimit(taObj) {
+	if (taObj.value.length==maxL) return false;
+	return true;
+}
+
+function taCount(taObj,Cnt) { 
+	objCnt=createObject(Cnt);
+	objVal=taObj.value;
+	if (objVal.length>maxL) objVal=objVal.substring(0,maxL);
+	if (objCnt) {
+		if(bName == "Netscape"){	
+			objCnt.textContent=maxL-objVal.length;}
+		else{objCnt.innerText=maxL-objVal.length;}
+	}
+	return true;
+}
+function createObject(objId) {
+	if (document.getElementById) return document.getElementById(objId);
+	else if (document.layers) return eval("document." + objId);
+	else if (document.all) return eval("document.all." + objId);
+	else return eval("document." + objId);
 }
