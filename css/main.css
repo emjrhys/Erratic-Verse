@@ -2,7 +2,8 @@
 /* CSS Document */
 /* Created by x_terrain and noahjl for Erratic Verse. © 2011 Erratic Verse */
 
-/* main objects */
+
+/* links */
 
 a {
 	text-decoration: none;
@@ -16,10 +17,11 @@ a:hover {
 	text-decoration: none;
 }
 
+/* main objects */
+
 body {
 	background-color: #FFFFFF;
 	font-family: Helvetica, Arial, Georgia, Sans-serif, Cursive;
-	
 }
 
 #title {
@@ -70,7 +72,7 @@ body {
 }
 
 #poem {
-	width: 325px;
+	width: 330px;
 	margin-top: 25px;
 	margin-left: auto;
 	margin-right: auto;
@@ -78,6 +80,8 @@ body {
 	background-color: #CCCCCC;
 	color: #666666;
 	padding: 20px 20px 20px 20px;
+	line-height: 120%;
+	text-size: .8em;
 }
 
 #aboutPic {
@@ -89,6 +93,10 @@ body {
 	padding: 5px 5px 5px 5px;
 }
 
+#line {
+	font-size: .9em;
+}
+
 #about {
 	padding-left: 10px;
 	padding-right: 10px;
@@ -97,11 +105,15 @@ body {
 }
 
 #textbox {
-	width: 158px;
+	width: 162px;
 }
 
 #myCounter {
 	float: right;
+}
+
+.stuff {
+	background: url('images/buttons/button_a.png');
 }
 
 #form1 {
@@ -111,10 +123,6 @@ body {
 	margin-right: auto;
 	text-align: center;
 	color: #666666;
-}
-
-.mybutton {
-	background-color: #CCCCCC;
 }
 
 #footer{
@@ -128,8 +136,62 @@ body {
 	padding-left: 20px;
 	padding-right: 20px;
 	width: 610px;
-	height: 50px;
+	height: 45px;
 	color: #FFF;
+	font-size: .9em;
 }
+
+/* buttons */
+
+.mybutton {
+	background-color: #CCCCCC;
+	border: solid #666666 1px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+.mybuttonhover {
+	border: solid #000000 1px;
+}
+
+#buttons {
+	overflow: hidden;
+	width: 400px;
+	margin-left: 11px;
+	margin-right: 11px;
+}
+
+a.newbutton {
+    background: transparent url('../images/buttons/button_a.png') no-repeat scroll top right;
+    color: #444;
+    display: block;
+    float: left;
+    font: normal 12px arial, sans-serif;
+    height: 26px;
+    margin-right: 6px;
+    padding-right: 10px; /* sliding doors padding */
+    text-decoration: none;
+}
+
+a.newbutton span {
+	background: transparent url('../images/buttons/button_span.png') no-repeat;
+	display: block;
+	line-height: 14px;
+	padding: 6px 0px 6px 10px;
+}
+
+a.newbutton:active {
+	background-position: bottom right;
+	color: #000;
+	outline: none;
+}
+
+a.newbutton:active span {
+	background-position: bottom left;
+	padding: 7px 0px 5px 10px;
+}
+
+
 
 /*fonts*/

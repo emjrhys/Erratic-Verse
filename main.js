@@ -1,7 +1,9 @@
 // JavaScript Document
 // © 2011 Erratic Verse
 
-var reflectLines = ["rippling water under traveling fish","waving blossoms on a lone cherry tree","bees humming from flower to flower","bathing in the light of the stars","truth looking out from behind dark clouds","I spend my days in silent contemplation","I percieve truth through my experiences","shattering the mirrors of the past","I walk through a broken memory","gazing across the darkening treetops","I wait for the night to fall","leaves falling to rest on shadow","the world bustles with activity","the calm of night creeps across the earth","the scent calms my soul","rain falls on a silent pond","a dark secret beneath shining gardens","hushed words of other worlds","fish swimming through a quiet sea","tranquil faces beneath the waves","dreams scattered across desolation","asleep on a distant shore"];
+var romanceLines = ["thinking of you, wherever you are","the lonely dove"]
+
+var reflectLines = ["rippling water under traveling fish","waving blossoms on a lone cherry tree","bees humming from flower to flower","bathing in the light of the stars","truth looking out from behind dark clouds","I spend my days in silent contemplation","I percieve truth through my experiences","shattering the mirrors of the past","I walk through a broken memory","gazing across the darkening treetops","I wait for the night to fall","leaves falling to rest on shadow","the world bustles with activity","the calm of night creeps across the earth","the scent calms my soul","rain falls on a silent pond","a dark secret beneath shining gardens","hushed words of other worlds","fish swimming through a quiet sea","tranquil faces beneath the waves","dreams scattered across desolation","asleep on a distant shore","a scattered dream that's like a far-off memory","a far-off memory that's like a scattered dream","I want to line the pieces up"];
 
 var darkLines = ["eyes like shattered glass","a dying soul, a single tear wept","my one hope stolen","your warm embrace stings like the cold","the sunset reminds me","swimming in an endless void","the inorganic blood of empty souls","a final sunset","dying on a distant shore","emptiness","why? I disappear","misunderstanding","for the last time","piercing my heart","I collect my tears in a fishbowl","the falling stones of my existance","the crumbling pillars of my humanity","the rasping breath of a fallen angel","I fall into oblivion"];
 
@@ -105,4 +107,31 @@ function createObject(objId) {
 	else if (document.layers) return eval("document." + objId);
 	else if (document.all) return eval("document.all." + objId);
 	else return eval("document." + objId);
+}
+
+function submitPoem(field)
+{
+	var line = document.getElementById("textbox").value;
+	if (line.length <= 5)
+	{
+		document.getElementById('error').innerHTML = 'Line is too short...';
+		setTimeout("document.getElementById('error').innerHTML = 'Submit a line of poetry:'",2250);
+	}
+	else
+	{
+		document.getElementById("poem").innerHTML = "Thank you for your submission!<br /> <span id = \"line\">&nbsp&nbsp&nbsp - &nbsp " + line + "</span><br /> <input type = \"button\" value = \"Submit Another Line\" onClick = \"submitAnother();\"/>"
+	}
+}
+
+function submitAnother()
+{
+	document.getElementById("poem").innerHTML = "<span id = \"error\">Submit a line of poetry:</span> <span id=myCounter>40</span><br /><br /> <input type = \"text\" id = \"textbox\" name = \"name\" value = \"\" onKeyPress=\"return taLimit(this)\" onKeyUp=\"return taCount(this,'myCounter')\" />  <select name=\"mydropdown\"> <option value=\"Ecstasy\">Ecstasy</option> <option value=\"Romance\">Romance</option> <option value=\"Reflection\">Reflection</option> <option value=\"Fury\">Fury</option> <option value=\"Melancholy\">Melancholy</option> </select> <input type = \"button\"value = \"Submit\" onClick = \"submitPoem();\"/>"
+}
+
+function hov(loc,cls,otr) { 
+  	if(loc.className) 
+	{
+	    loc.className=cls;
+		setTimeout("loc.className=otr",200);
+	}
 }

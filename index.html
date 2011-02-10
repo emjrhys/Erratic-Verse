@@ -2,7 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<title>Erratic Verse - a poem generator </title>
-		<link type="text/css" rel="stylesheet" href="css/main.css"/>
+		<link type = "text/css" rel = "stylesheet" href = "css/main.css"/>
+        <link rel = "SHORTCUT ICON" href = "images/favicon.ico" />
         <script type = "text/javascript" src = "main.js"></script>
         <!-- © 2011 Erratic Verse-->
 	</head>
@@ -11,13 +12,19 @@
 		<div id="title"><img src="images/Header.png" title = "Erratic Verse - A poem generator" alt = "Erratic Verse - A poem generator" />
 		</div>
         <div id = "nav">
-			poem &nbsp&nbsp&nbsp&nbsp&nbsp <a href = "submit.html">submit</a> &nbsp&nbsp&nbsp&nbsp&nbsp <del>rate</del> &nbsp&nbsp&nbsp&nbsp&nbsp <del>donate</del> &nbsp&nbsp&nbsp&nbsp&nbsp <a href = "about.html">about</a>
+			poem &nbsp&nbsp&nbsp&nbsp&nbsp <a href = "submit.html">submit</a> <!--&nbsp&nbsp&nbsp&nbsp&nbsp <del>rate</del> &nbsp&nbsp&nbsp&nbsp&nbsp <del>donate</del>--> &nbsp&nbsp&nbsp&nbsp&nbsp <a href = "about.html">about</a>
         </div>
 		<div id="content">
-        	<form name = "mood" id = "form1">
+        	<div id = "form1">
             How are you feeling?<br /><br />
-            <input type = "button" class = "mybutton" value = "Ecstatic" onClick = "getPoem(0);"/> <input type = "button" class = "mybutton" value = "Romantic" onClick = "getPoem(1);"/> <input type = "button" class = "mybutton" value = "Reflective" onClick = "getPoem(2);"/> <input type = "button" class = "mybutton" value = "Furious" onClick = "getPoem(3);"/> <input type = "button" class = "mybutton" value = "Melancholy" onClick = "getPoem(4);"/>
-            </form>
+            <div id = "buttons">
+            <a class = "newbutton" onclick = "getPoem(0),this.blur();" href = "#"><span>Ecstatic</span></a>
+            <a class = "newbutton" onclick = "getPoem(1),this.blur();" href = "#"><span>Romantic</span></a>
+            <a class = "newbutton" onclick = "getPoem(2),this.blur();" href = "#"><span>Reflective</span></a>
+            <a class = "newbutton" onclick = "getPoem(3),this.blur();" href = "#"><span>Furious</span></a>
+            <a class = "newbutton" onclick = "getPoem(4),this.blur();" href = "#"><span>Melancholy</span></a>
+            </div>
+            </div>
 		<p id = "poem">
         	Click a mood to generate a poem...
 		</p>

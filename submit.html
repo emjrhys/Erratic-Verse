@@ -11,19 +11,20 @@
 		<div id="title"><img src="images/Header.png" title = "Erratic Verse - A poem generator" alt = "Erratic Verse - A poem generator" />
 		</div>
         <div id = "nav">
-			<a href = "index.html">poem</a> &nbsp&nbsp&nbsp&nbsp&nbsp submit &nbsp&nbsp&nbsp&nbsp&nbsp <del>rate</del> &nbsp&nbsp&nbsp&nbsp&nbsp <del>donate</del> &nbsp&nbsp&nbsp&nbsp&nbsp <a href = "about.html">about</a>
+			<a href = "index.html">poem</a> &nbsp&nbsp&nbsp&nbsp&nbsp submit <!--&nbsp&nbsp&nbsp&nbsp&nbsp <del>rate</del> &nbsp&nbsp&nbsp&nbsp&nbsp <del>donate</del>--> &nbsp&nbsp&nbsp&nbsp&nbsp <a href = "about.html">about</a>
         </div>
 		<div id="content">
 		<p id = "poem">
-        	Submit a line of poetry:<span id=myCounter>40</span><br /><br />
-            <input type = "text" id = "textbox" name = "name" value = "" onKeyPress="return taLimit(this)" onKeyUp="return taCount(this,'myCounter')" /> 
-            <select name="mydropdown" class = "mybutton">
+        	<span id = "error">Submit a line of poetry:</span> <span id=myCounter>40</span><br /><br />
+            <input type = "text" id = "textbox" name = "text" value = "" onKeyPress="return taLimit(this)" onKeyUp="return taCount(this,'myCounter')" /> 
+            <select name="mydropdown">
 				<option value="Ecstasy">Ecstasy</option>
 				<option value="Romance">Romance</option>
 				<option value="Reflection">Reflection</option>
                 <option value="Fury">Fury</option>
                 <option value="Melancholy">Melancholy</option>
-			</select> <input type = "button" class = "mybutton" value = "Submit" onClick = ""/>
+			</select> 
+            <input type = "button"value = "Submit" onClick = "submitPoem();"/>
 		</p>
 		</div>
         <div id = "footer">
